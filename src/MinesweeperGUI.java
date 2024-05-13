@@ -1,5 +1,4 @@
 import javax.swing.*;
-import javax.swing.plaf.FontUIResource;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,8 +26,8 @@ public class MinesweeperGUI implements ActionListener {
     ArrayList<Integer> yPosition; //Grid's Y Axis
     //Methods
     public MinesweeperGUI() {
-        xPosition = new ArrayList<Integer>();
-        yPosition = new ArrayList<Integer>(); //Instantiates Arraylists for coordinates
+        xPosition = new ArrayList<>();
+        yPosition = new ArrayList<>(); //Instantiates Arraylists for coordinates
 
         gridSize = 9;
         bombs = 3;
@@ -116,11 +115,9 @@ public class MinesweeperGUI implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        for (int i = 0; i < buttons.length; i++)
-        {
-            for (int j = 0; j < buttons.length; j++)
-            {
-                if (e.getSource()==buttons[i][j]) { //Will Check which button was pressed and perform the designated output when the button the action was performed on is found
+        for (JButton[] button : buttons) { //For Each Loop can only be conducted on the first for loop
+            for (int j = 0; j < buttons.length; j++) {
+                if (e.getSource() == button[j]) { //Will Check which button was pressed and perform the designated output when the button the action was performed on is found
                     System.out.println("Clicked");
                 }
             }
