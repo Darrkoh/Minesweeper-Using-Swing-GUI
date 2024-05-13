@@ -171,11 +171,9 @@ public class MinesweeperGUI implements ActionListener {
                 }
             }
         }
-        for (int i = 0; i < solution.length; i++)
-        {
-            for (int j = 0; j < solution[0].length; j++)
-            {
-                System.out.print(solution[i][j] + " ");
+        for (int[] solutions : solution) {
+            for (int j = 0; j < solution[0].length; j++) {
+                System.out.print(solutions[j] + " ");
             }
             System.out.println();
         }
