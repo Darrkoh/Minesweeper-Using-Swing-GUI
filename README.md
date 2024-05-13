@@ -1,0 +1,1 @@
+This Program is a Minesweeper Game I created using a tutorial (https://youtu.be/MCS1hSBLJcY). The point of this project was for me to get familliar with Java's Swing GUI so I can create solo projects later on with it. This project does differ from the original tutorial in some aspects where I saw fit for efficiency.
