@@ -37,24 +37,6 @@ public class MinesweeperGUI implements ActionListener {
         gridSize = 9;
         random = new Random(); //Instantiate the random variable
         this.bombs = bombs;
-        //User Selects How Many Bombs They want\\
-        /*do {
-            condition = true;
-            try {
-                System.out.println("How many Bombs do you want (Above 0 and Up to 80)"); //No more than 80 can be generated and 81 would cause there to be no winner
-                bombs = inputScanner.nextInt();
-            } catch (InputMismatchException e) //If user doesn't enter a number
-            {
-                System.out.println("Enter a Number between 1-80");
-                condition = false; //So Loop Continues
-            }
-
-            if (bombs < 1 || bombs > 80)
-            {
-                System.out.println("Enter a Number between 1-80");
-                condition = false; //So Loop Continues
-            }
-        } while (!condition);*/
 
         //Frame Setup\\
         frame = new JFrame("Game");
