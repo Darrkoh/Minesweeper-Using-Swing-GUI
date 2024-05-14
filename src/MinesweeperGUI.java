@@ -21,14 +21,14 @@ public class MinesweeperGUI implements ActionListener {
 
     //Other Properties
     int gridSize;
-    int bombs; //Number of bombs present
+    int bombs;
 
     Random random; //Import Random class for the placement of bombs
     ArrayList<Integer> xPosition; //Grid's X Axis
     ArrayList<Integer> yPosition; //Grid's Y Axis
 
     ///////////////////////////////Methods\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-    public MinesweeperGUI() {
+    public MinesweeperGUI(int bombs) {
         //Instantiate Variables\\
         Scanner inputScanner = new Scanner(System.in); //For User Inputs
         boolean condition;
@@ -36,9 +36,9 @@ public class MinesweeperGUI implements ActionListener {
         yPosition = new ArrayList<>(); //Instantiates Arraylists for coordinates
         gridSize = 9;
         random = new Random(); //Instantiate the random variable
-
+        this.bombs = bombs;
         //User Selects How Many Bombs They want\\
-        do {
+        /*do {
             condition = true;
             try {
                 System.out.println("How many Bombs do you want (Above 0 and Up to 80)"); //No more than 80 can be generated and 81 would cause there to be no winner
@@ -54,7 +54,7 @@ public class MinesweeperGUI implements ActionListener {
                 System.out.println("Enter a Number between 1-80");
                 condition = false; //So Loop Continues
             }
-        } while (!condition);
+        } while (!condition);*/
 
         //Frame Setup\\
         frame = new JFrame("Game");
@@ -197,7 +197,7 @@ public class MinesweeperGUI implements ActionListener {
                             bombsAround++; //Adds 1 to bombs around counter
                         }
                     }
-                    solution[y][x] = bombsAround; //Number of bombs around tile being checked is saved
+                    solution[y][x] = bombsAround; //Number of bombs around button being checked is saved
                 }
             }
         }
