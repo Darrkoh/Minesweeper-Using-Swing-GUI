@@ -138,12 +138,6 @@ public class MinesweeperGUI implements ActionListener {
                 }
             }
         }
-
-        //GET RID OF AT END, THIS IS TO CHECK COORDINATES
-
-        for (int i=0; i < bombs; i++) {
-            System.out.println("The X axis of Bomb " + i + " is " + xPosition.get(i) + " and the Y axis is " + yPosition.get(i));
-        }
         getSolution(); //Will get the solution of each tile
     }
 
