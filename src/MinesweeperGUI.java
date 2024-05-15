@@ -3,9 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Random;
-import java.util.Scanner;
 
 public class MinesweeperGUI implements ActionListener {
 
@@ -30,8 +28,6 @@ public class MinesweeperGUI implements ActionListener {
     ///////////////////////////////Methods\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     public MinesweeperGUI(int bombs) {
         //Instantiate Variables\\
-        Scanner inputScanner = new Scanner(System.in); //For User Inputs
-        boolean condition;
         xPosition = new ArrayList<>();
         yPosition = new ArrayList<>(); //Instantiates Arraylists for coordinates
         gridSize = 9;
